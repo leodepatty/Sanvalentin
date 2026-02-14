@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti ❤️</title>
+  <style>
+    body {
+      background-color: #ffe6ec;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    img {
+      width: 250px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #e63956;
+    }
+    #frase {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Feliz San Valentín Mi Pequeña Tinky Winky 💝❤️</h1>
+
+  <img id="foto" src="inicio1.jpeg" alt="Nosotros">
+
+  <p id="frase">Haz clic para ver algo bonito 💕</p>
+
+  <button onclick="cambiar()">Presióname 💖</button>
+
+  <script>
+    const frases = [
+      "Tal vez no esperabas algo como esto, peeero quería esforzarme por darte algún tipo de regalo y esto es como un tipo de carta virtual, espero y lo disfrutes ❤️",
+      "Lo estamos llevando bien no?jsjs antes nos echabamos mucha tierra pero oye patty no hay nada ni nadie que pueda prohibirme lo mejor que hay en mi vida, estar junto a ti. Gracias por hacerme sentir tan feliz con este sentimiento tan bonito que tengo por ti, cada que tu nombre pasa por mi cabeza mi corazón salta de alegria. Me das tanta paz con solo pensar en tí. Estaré para ti hasta que me muera. Cada que estaba contigo no sentía el tiempo, era lo que menos me preocupaba lo único que quería era que te divirtieras y disfrutaras junto a mi, extraño mucho agarrarte de la mano y que luego me molestaras con que estaba nervioso porque tenía la mano toda sudada(si estaba nervioso sjsj) extraño mucho dejarte en la esquina de tu casa porque tus padres o tu hermano o algún conocido nos pudiera ver y sobretodo apretarte en un fuerte abrazo ❣️🥰",
+      "Quiero ser el chico que te acompañe toda tu vida y me esforzaré para que nunca sientas que te equivocaste. No hay distancias grandes para todo el amor que yo siento por ti patty. No entiendo como paso pero bendito sea el día en que te vi sentada en ese paradero y me anime a acercarme, no se que nos traiga el mundo, seguro habrán dramas pero no habrá fuerza que me aleje y seguramente cambiaremos así como cambiaste todo en mi en el momento en que llegaste, pero se lo que quiero y es estar contigo por el resto de mi vida. Voy a quererte intensamente por el resto de mi vida, eres la mejor historia que pude construir y viviré recordando cada paso que dimos para llegar hasta aquí. Estoy perdidamente enamorado de ti, hoy mañana y por siempre 💖✨",
+      "Este pequeño nunca imagino a encontrar a una chica tan increible. Gracias por existir y ser tal como eres, sabes no hay forma en la que salgas de mi cabeza, literal cada que escucho mis canciones favoritas pienso en ti, me despierto pienso en ti, salgo a la calle pienso en ti, me voy a dormir y sueño contigo jsjs has dejado una huella muy grande en mi corazón. Tu eres la chica por la cual me siento un hombre que puede hacer todo en este mundo. Te deje una promesa de amor en forma de anillo que planeo completamente cumplir, te jure amor eterno y así será, soy tu compañero, confía en mi que yo nunca te voy a defraudar. You take me away from reality to another dimension and you got me running from the world with you. Bendita la luz que me otorgas, bendita tu bella carita que se aparece cada que cierro los ojos, bendita sea tu preciosa sonrisita y esos encantadores ojitos. Te quiero y te extraño muchomuchomuchomucho mi pequeña princesita.  💓💕"
+    ];
+
+    const fotos = [
+      "foto1.jpeg",
+      "foto2.jpeg",
+      "foto3.jpeg",
+      "foto4.jpeg"
+    ];
+
+    let indice = 0;
+
+    function cambiar() {
+      document.getElementById("frase").innerText = frases[indice];
+      document.getElementById("foto").src = fotos[indice];
+      indice = (indice + 1) % frases.length;
+    }
+  </script>
+
+</body>
+</html>
